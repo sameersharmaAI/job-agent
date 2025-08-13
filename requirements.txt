@@ -1,0 +1,22 @@
+# Core app
+python-dotenv
+requests
+
+# LLM client (optional but handy if you later switch from raw HTTP)
+openai
+
+# Document parsing
+python-docx
+beautifulsoup4
+lxml
+
+# Browser automation & drivers
+selenium
+webdriver-manager
+
+# Web frameworks / UI (if you use them)
+flask
+streamlit
+
+# Agents / orchestration (if used in your flow)
+crewai
