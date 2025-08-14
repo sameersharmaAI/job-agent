@@ -28,6 +28,9 @@ class Config:
     YOUR_PHONE = os.getenv("YOUR_PHONE")
     YOUR_LINKEDIN_PROFILE = os.getenv("YOUR_LINKEDIN_PROFILE")
     YOUR_GITHUB_PROFILE = os.getenv("YOUR_GITHUB_PROFILE")
+    DESIRED_EXPERIENCE_LEVELS = os.getenv("DESIRED_EXPERIENCE_LEVELS")
+    POSTED_WITHIN_DAYS = int(os.getenv("POSTED_WITHIN_DAYS"))
+    DEFAULT_JOB_LOCATION = os.getenv("DEFAULT_JOB_LOCATION")
 
     # --- OpenAI-compatible LLM endpoint (served by TRT-LLM container)
     OPENAI_PORT = int(os.getenv("OPENAI_PORT", "8000"))
@@ -91,8 +94,11 @@ class Config:
             "CONTAINER_NAME": Config.CONTAINER_NAME,
             "OPENAI_PORT": Config.OPENAI_PORT,
             "FORCE_BUILD": Config.FORCE_BUILD,
+            # new:
+            "DESIRED_EXPERIENCE_LEVELS": Config.DESIRED_EXPERIENCE_LEVELS,
+            "POSTED_WITHIN_DAYS": Config.POSTED_WITHIN_DAYS,
+            "DEFAULT_JOB_LOCATION": Config.DEFAULT_JOB_LOCATION,
         }
-
 # Initialize app directories immediately
 APP_CONFIG = Config()
 APP_CONFIG.ensure_dirs()

@@ -20,3 +20,5 @@ streamlit
 
 # Agents / orchestration (if used in your flow)
 crewai
+
+langchain
